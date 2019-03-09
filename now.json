@@ -1,15 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "./src/*.ts",
-      "use": "@now/node"
-    }
-  ],
-  "env": {
-    "IS_NOW": "true"
-  },
-  "routes": [
-    { "src": "/scrap", "dest": "/src/api/scraper.ts" },
-  ]
+    "version": 2,
+    "name": "my-ts-app",
+    "builds": [
+        { "src": "./src/api/scraper.ts", "use": "@now/node@canary" }
+    ],
+    "routes": [
+        { "src": "/scraper", "dest": "/src/api/scraper.ts" }
+    ]
 }
